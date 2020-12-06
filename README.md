@@ -1,6 +1,6 @@
 # Geofabrik
 
-A small Golang package to access data of (Geofabrik.de)[https://download.geofabrik.de] (Download Server) for OSM Data faster.
+A small Golang package to access data of [Geofabrik.de (Download Server)](https://download.geofabrik.de) for OSM Data faster.
 
 ## Example
 
