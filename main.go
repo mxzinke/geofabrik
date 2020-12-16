@@ -36,7 +36,9 @@ func OSMFileHash(fileName string) ([]byte, error) {
 // It will return a string of the path, where the file could be found.
 func OSMFile(baseFolder string, fileName string) (string, error) {
 	downloadURL := baseURL + fileName
-	filePath := path.Join(baseFolder, fileName)
+
+	_, truncatedFileName := path.Split(fileName)
+	filePath := path.Join(baseFolder, truncatedFileName)
 
 	if err := downloadFile(filePath, downloadURL); err != nil {
 		return "", fmt.Errorf("Downloading the OSM File from GeoFabrik Server: %v ", err)
